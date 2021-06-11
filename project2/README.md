@@ -10,3 +10,36 @@ usage: ./logger [-o file] [-p sopath] [--] cmd [cmd args ...]
     -o: print output to file, print to "stderr" if no file specified
     --: separate the arguments for logger and for the command
 ```
+The message should be displayed if an invalid argument is passed to the logger.
+
+## Monitored file access activities
+The list of monitored library calls is shown below. It covers several functions we have introduced in the class.
+```
+chmod   chown   close   creat   fclose  fopen   fread   fwrite
+open    read    remove  rename  tmpfile write
+```
+
+## Output
+A sample output of the homework is given below. More examples can be found in the "Sample Output" section.
+```
+$ ./logger ./sample
+[logger] creat("/home/ta/hw2/tmp/aaaa", 600) = 3
+[logger] chmod("/home/ta/hw2/tmp/aaaa", 666) = 0
+[logger] chown("/home/ta/hw2/tmp/aaaa", 65534, 65534) = -1
+[logger] rename("/home/ta/hw2/tmp/aaaa", "/home/ta/hw2/tmp/bbbb") = 0
+[logger] open("/home/ta/hw2/tmp/bbbb", 1101, 666) = 4
+[logger] write("/home/ta/hw2/tmp/bbbb", "cccc.", 5) = 5
+[logger] close("/home/ta/hw2/tmp/bbbb") = 0
+[logger] open("/home/ta/hw2/tmp/bbbb", 000, 000) = 4
+[logger] read("/home/ta/hw2/tmp/bbbb", "cccc.", 100) = 5
+[logger] close("/home/ta/hw2/tmp/bbbb") = 0
+[logger] tmpfile() = 0x55c418842670
+[logger] fwrite("cccc.", 1, 5, "/tmp/#14027911 (deleted)") = 5
+[logger] fclose("/tmp/#14027911 (deleted)") = 0
+[logger] fopen("/home/ta/hw2/tmp/bbbb", "r") = 0x55c418842670
+[logger] fread("cccc.", 1, 100, "/home/ta/hw2/tmp/bbbb") = 5
+[logger] fclose("/home/ta/hw2/tmp/bbbb") = 0
+[logger] remove("/home/ta/hw2/tmp/bbbb") = 0
+sample done.
+[logger] write("/dev/pts/19", "sample done...", 14) = 14
+```
