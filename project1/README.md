@@ -24,6 +24,13 @@ bash    26884   terrynini38514	1u     CHR      3        /dev/pts/0
 bash    26884   terrynini38514	2u     CHR      3        /dev/pts/0
 bash    26884   terrynini38514	255u   CHR      3        /dev/pts/0
 ```
+
+## Program Argument
+Your program should work without any arguments. In the meantime, your program have to properly handle the following arguments:
+- ```-c REGEX```: a regular expression (REGEX) filter for filtering command line. For example ```-c sh``` would match ```bash```, ```zsh```, and ```share```.
+- ```-t TYPE```: a TYPE filter. Valid TYPE includes ```REG```, ```CHR```, ```DIR```, ```FIFO```, ```SOCK```, and ```unknown```. TYPEs other than the listed should be considered as invalid. For invalid types, your program have to print out an error message ```Invalid TYPE``` option. in a single line and terminate your program.
+- ```-f REGEX```: a regular expression (REGEX) filter for filtering filenames.
+
 ## Requirement
 - ```COMMAND```:
   - The executable filename of a running process.
@@ -83,8 +90,3 @@ bash    26884   terrynini38514	255u   CHR      3        /dev/pts/0
   - Append  ```(deleted)``` (note the space before the message) to the end of the value if the value for ```FD``` is ```del```.
   - Append  ```(opendir: Permission denied)``` if the access to ```/proc/pid/fd``` is failed due to permission denied.
   - Append  ```(readlink: Permission denied)``` if the access to ```/proc/pid/(cwd|root|exe)``` is failed due to permission denied.
-## Program Argument
-Your program should work without any arguments. In the meantime, your program have to properly handle the following arguments:
-- ```-c REGEX```: a regular expression (REGEX) filter for filtering command line. For example ```-c sh``` would match ```bash```, ```zsh```, and ```share```.
-- ```-t TYPE```: a TYPE filter. Valid TYPE includes ```REG```, ```CHR```, ```DIR```, ```FIFO```, ```SOCK```, and ```unknown```. TYPEs other than the listed should be considered as invalid. For invalid types, your program have to print out an error message ```Invalid TYPE``` option. in a single line and terminate your program.
-- ```-f REGEX```: a regular expression (REGEX) filter for filtering filenames.
