@@ -4,4 +4,7 @@
 2. Monitor File Activities of Dynamically Linked Programs
 3. Extend the Mini Lib C to Handle Signals
 4. Simplified Scriptable Instruction Level Debugger
-5. Assembly Code & Ptrace CTF
+
+## CTF
+1. Assembly Code
+2. Ptrace
