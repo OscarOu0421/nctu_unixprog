@@ -3,3 +3,6 @@
 1. 'lsof'-like program
 2. Monitor File Activities of Dynamically Linked Programs
 3. Extend the Mini Lib C to Handle Signals
+4. Simplified Scriptable Instruction Level Debugger
+
+## Assembly Code & Ptrace CTF
