@@ -8,3 +8,21 @@
 ## CTF
 1. Assembly Code
 2. Ptrace
+
+## Syllabus
+- syllabus
+- ov+tool
+- file+dir
+- file+stdio
+- sysinfo
+- procenv
+- procctrl
+- procrel
+- exam intro
+- signals
+- assembly
+- ptrace
+- threads
+- threadctl
+- classipc
+- netipc
