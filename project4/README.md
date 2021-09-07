@@ -1,4 +1,4 @@
-# Project4 - Advanced Programming in the UNIX Environment
+# Project4 - Simplified Scriptable Instruction Level Debugger
 
 ## Introduction
 In this homework, we are going to implement a simple instruction-level debugger that allows a user to debug a program interactively at the assembly instruction level. You can implement the debugger by using the ptrace interface. The commands you have to implement are summarized as follows:
